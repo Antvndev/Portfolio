@@ -4,12 +4,23 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 2.5rem;
+}
+
 body {
   font-family: "Inclusive Sans", sans-serif;
-  font-size: 16px;
   font-weight: 400;
   color: #fff;
-  background-color: #112233;
+  background-color: #0a0a0a;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 400;
@@ -36,76 +47,21 @@ main {
 
 .header-section {
   display: flex;
-  align-items: center;
   gap: 2.5rem;
   padding: 4rem 0 5rem;
-}
-
-@media (max-width: 768px) {
-  .header-section {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-.avatar-container {
-  position: relative;
-  width: 11rem;
-  height: 11rem;
-  border-radius: 50%;
-  overflow: hidden;
-  min-width: 11rem;
-  min-height: 11rem;
-}
-
-.avatar-background {
-  position: absolute;
-  inset: 0;
-  padding: 0.25rem;
-  border-radius: 50%;
-  background: gray;
-}
-
-.avatar-wrapper {
-  width: 100%;
-  height: 100%;
-  background-color: #1a1a1a;
-  border-radius: 50%;
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 4px solid white;
-  border-radius: 50%;
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 1.5rem;
+  width: 100%;
 }
 
-.text-container h1 {
-  color: lightgray;
-  font-weight: bold;
-  font-size: 1.8rem;
-  letter-spacing: 0.03em;
-  position: relative;
-}
 
 .container {
   width: 100%;
   display: flex;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
 }
 
 .location-link {
@@ -130,6 +86,14 @@ main {
 }
 
 @media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
   .social-links {
     justify-content: center;
   }
@@ -153,16 +117,6 @@ main {
   flex-direction: column;
   margin-top: 1.75rem;
   text-align: center;
-}
-
-.tech-stack-container h2,
-.projects-container h2 {
-  font-weight: bold;
-  font-size: 1.125rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: white;
-  margin-bottom: 2.5rem;
 }
 
 .tech-stack-grid {
@@ -192,13 +146,13 @@ main {
   gap: 0.375rem;
   border: none;
   border-radius: 10px;
-  background-color: rgba(211, 211, 211, 0.1);
+  background-color: #1A1A1A;
   color: white;
   transition: all 0.3s ease-in-out;
 }
 
 .tech-stack-button:hover {
-  background-color: rgba(211, 211, 211, 0.3);
+  background-color: #262626;
 }
 
 .tech-stack-icon {
@@ -222,6 +176,7 @@ main {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
+  background-color: #151516;
   gap: 1.25rem;
   border-radius: 0.5rem;
   border: 1px solid rgba(211, 211, 211, 0.5);
@@ -235,11 +190,6 @@ main {
 
 .card .description-container h3 {
   margin: 0.75rem 0;
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.1em;
-  color: white;
-  text-transform: uppercase;
 }
 
 .card .description-container p {
@@ -289,7 +239,8 @@ main {
   border-radius: 0.75rem;
   font-size: 0.75rem;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color:#404040;
+  border: 1px solid #78716c;;
   color: white;
 }
 
@@ -306,6 +257,15 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: middle;
+}
+.img-hover-zoom{
+  overflow: hidden;
+}
+.img-hover-zoom img{
+  transition: transform .5s ease;
+}
+.img-hover-zoom:hover img{
+  transform: scale(1.05);
 }
 
 .project-links-container {
@@ -337,15 +297,15 @@ main {
   font-size: 0.75rem;
   font-weight: bold;
   color: white;
-  background-color: rgba(211, 211, 211, 0.1);
+  background-color: #262626;
   text-transform: uppercase;
   transition: all 0.3s ease;
   text-decoration: none;
+  border: 1px solid #404040;
 }
 
 .project-links-container a:hover {
   background-color: #1A1A1A;
-  border: 1px solid #404040;
 }
 
 .shimmer-button {
@@ -355,12 +315,12 @@ main {
   border: 1px solid #404040;
   background: linear-gradient(
     110deg,
-    #1A1A1A 0%,
+    #0a0a0a 0%,
     #1A1A1A 45%,
     #262626 45%,
     #262626 55%,
     #1A1A1A 55%,
-    #1A1A1A 100%
+    #0a0a0a 100%
   );
   background-size: 200% 100%;
   transition: background-color 0.3s ease, color 0.3s ease;
