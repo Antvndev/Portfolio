@@ -5,11 +5,10 @@
 }
 
 body {
-  box-sizing: border-box;
   font-size: 16px;
   color: #fff;
   background-color: #112233;
-  font-family: Roboto, serif;
+  font-family: "Inclusive Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -68,9 +67,11 @@ main .content-wrapper .header-section {
   inset: 0;
   padding: 0.25rem; 
   border-radius: 50%;
-  background: linear-gradient(to right, 
-      orange, red, purple);
+  background: gray;
+  /* background: linear-gradient(to right, 
+      orange, red, purple); */
 }
+
 
 .avatar-wrapper {
   width: 100%;
@@ -105,8 +106,6 @@ main .content-wrapper .header-section .text-container h1 {
 main .content-wrapper .header-section .text-container .container {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
@@ -156,16 +155,6 @@ main .content-wrapper .header-section .text-container .container .social-links a
   color: white;
 }
 
-main .content-wrapper .header-section .text-container .container .social-links a img {
-  width: 24px;
-  height: 24px;
-}
-
-main .content-wrapper .header-section .text-container .container .github-icon img {
-  width: 20px;
-  height: 20px;
-}
-
 .tech-stack-container {
   display: flex;
   flex-direction: column;
@@ -201,8 +190,9 @@ main .content-wrapper .header-section .text-container .container .github-icon im
 }
 
 .tech-stack-button {
-  border: 0px solid rgba(211, 211, 211, 0.5); 
-  background-color: transparent;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgba(211, 211, 211, 0.1);
   gap: 0.375rem;
   height: 6rem; 
   display: flex;
@@ -214,7 +204,7 @@ main .content-wrapper .header-section .text-container .container .github-icon im
 }
 
 .tech-stack-button:hover {
-  background-color: rgba(211, 211, 211, 0.1);
+  background-color: rgba(211, 211, 211, 0.3);
 }
 
 .tech-stack-icon {
@@ -253,15 +243,19 @@ main .content-wrapper .header-section .text-container .container .github-icon im
 }
 
 .card .description-container h3 {
+  margin: 0.75rem 0;
   font-weight: 600;
   font-size: 1.25rem;
   letter-spacing: 0.1em;
   color: white;
+  text-transform: uppercase;
 }
 
 .card .description-container p {
   color: lightgray;
-  margin-top: 0.75rem;
+  span{
+    text-transform: uppercase;
+  }
 }
 
 .card .description-container  a {
@@ -288,25 +282,31 @@ main .content-wrapper .header-section .text-container .container .github-icon im
   text-align: center;
   gap: 0.375rem;
   padding: 0.25rem 1rem;
-  border-radius: 9999px;
+  border-radius: .75rem;
   font-size: 0.75rem;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
 }
+
 .tech-grid .tech-item p{
   margin: 0;
   color: inherit;
 }
 
+.card img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 26.65rem;
+  object-fit: contain;
+}
 @media (max-width: 768px) {
   .tech-grid{
     grid-template-columns: repeat(3, 1fr);
-  }
-  .card img{
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
   }
   .projects-container .card{
     width: 90%;
@@ -325,6 +325,9 @@ main .content-wrapper .header-section .text-container .container .github-icon im
   align-items: center;
   gap: 0.5rem;
   margin-top: 2rem;
+}
+i{
+  font-size: 1.25rem;
 }
 
 .project-links-container a{
@@ -345,9 +348,7 @@ main .content-wrapper .header-section .text-container .container .github-icon im
 .project-links-container a:hover{
   background-color: rgba(211, 211, 211, 0.2);
 }
-.project-links-container .Primary{
-  background-color: rgb(60, 120, 240);
-}
+
 @media (max-width: 768px){
   .description-container .project-links-container{
     flex-direction: column;
