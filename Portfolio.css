@@ -177,10 +177,10 @@ main {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  background-color: #151516;
+  background-color: #1A1A1A;
   gap: 1.25rem;
   border-radius: 0.5rem;
-  border: 1px solid rgba(211, 211, 211, 0.5);
+  border: 1px solid rgba(211, 211, 211, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -241,7 +241,6 @@ main {
   font-size: 0.75rem;
   font-weight: bold;
   background-color:#404040;
-  border: 1px solid #78716c;;
   color: white;
 }
 
@@ -353,4 +352,36 @@ main {
 
 i {
   font-size: 1.25rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in-element {
+  animation: fadeIn 1.25s ease-in-out;
+}
+
+@keyframes PopOutIn{
+  from{scale: 1.1;}
+  to{scale: 1;}
+}
+.Pop-Out-In-element{
+  animation: PopOutIn 1s ease-in-out;
+}
+
+@keyframes DownUp{
+  from{transform: translateY(100px);}
+  to{transform: translateY(0px);}
+}
+.down-up-element{
+  animation: DownUp 1s ease-in-out;
+}
+@keyframes UpDown{
+  from{transform: translateY(-100px);}
+  to{transform: translateY(0px);}
+}
+.up-down-element{
+  animation: UpDown 1s ease-in-out;
 }
